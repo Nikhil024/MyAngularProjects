@@ -1,0 +1,16 @@
+<label>Enter User name</label>
+
+<input class="form-control" type="text" [(ngModel)]="userName"/>
+<br/>
+<button class="btn btn-primary" (click)='displayUserCreate($event)'>Submit</button>
+
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: userName !== '' || userName !== ''}">{{ userCreatedMessage }}</p>
+
+
+
+
+<p *ngIf="userCreated; else noUser">User was created {{ userName }}</p>
+<ng-template #noUser>
+  <p>No User Created</p>
+</ng-template>
