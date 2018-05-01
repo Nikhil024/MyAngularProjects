@@ -1,0 +1,18 @@
+<p appHiglight>Nikhil is here</p>.
+<p appBetterHighlight [defaultColor]="'yellow'" highlightColor="green">better Hightlight is here</p>
+
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+    <p *ngSwitchCase="100">Value is 100</p>
+    <p *ngSwitchDefault>Value is default</p>
+</div>
+
+
+
+<div *appUnless="onlyOdd"
+  class="list-group-item">
+  <li>
+    1,3,4,5
+  </li>
+</div>

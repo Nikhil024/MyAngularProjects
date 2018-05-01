@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="form-group">
+    <label class="font-weight-bold" for="exampleInputEmail1">Account Name</label>
+    <input type="text" class="form-control" #inputName id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1" #inputStatus>
+      <option></option>
+      <option>Active</option>
+      <option>Inactive</option>
+      <option>Unknown</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-primary"
+  (click)="onClickAddAccount(inputName.value, inputStatus.value)">Add Account</button>
+</div>
