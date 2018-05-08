@@ -13,7 +13,13 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import {DropdownDirective} from './shared/dropdown.directive';
+import { Routes, RouterModule } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: "" , component: AppComponent},
+  { path: "shopping-list" , component: ShoppingListComponent},
+  { path: "recpie" , component: RecipesComponent},
+];
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import {DropdownDirective} from './shared/dropdown.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
